@@ -17,5 +17,5 @@ Após clonar o projeto, é necessário atualizar as dependências.
 
 ```bash
 yarn
-yarn start
+yarn dev
 ```
