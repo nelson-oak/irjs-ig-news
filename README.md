@@ -19,3 +19,7 @@ Após clonar o projeto, é necessário atualizar as dependências.
 yarn
 yarn dev
 ```
+
+## Configurações adicionais
+
+- Criar arquivo **.env.local** com o conteúdo de **.env.local.example**, preenchendo com os dados necessários para executar a aplicação
