@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps } from "next"
 import Link from 'next/link'
 import { getSession, useSession } from "next-auth/client"
 import Head from "next/head"
@@ -56,8 +56,9 @@ export default function Post({ post }: PostPropsProps) {
   )
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
+    // paths: [{ params: { slug: 'lorem-ipsum-dolor-sit-amet-consectetur-adipisicing' }],
     paths: [],
     fallback: 'blocking'
   }
@@ -84,6 +85,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       post
-    }
+    },
+    revalidate: 60 * 30 // 30 minutos
   }
 }
