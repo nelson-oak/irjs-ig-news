@@ -45,7 +45,7 @@ export default function Post({ post }: PostPropsProps) {
           />
 
           <div className={styles.continueReading}>
-            Wana continue reading?
+            Wanna continue reading?
             <Link href="/">
               <a>Subscribe now 🤗️</a>
             </Link>
