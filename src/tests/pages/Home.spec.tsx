@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { mocked } from 'ts-jest/utils'
 
-import Home, { getStaticProps } from "../../pages/index"
+import Home, { getStaticProps } from "../../pages"
 import { stripe } from "../../services/stripe"
 
 jest.mock('next/router')
